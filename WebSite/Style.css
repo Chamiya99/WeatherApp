@@ -1,0 +1,124 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.table {
+    width: 100%;
+}
+
+th, td {
+    text-align: center;
+}
+
+th {
+    background-color: blue;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* CSS for chart container */
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style each chart */
+.chart {
+    width: 30%; /* Adjust the width as needed */
+}
+.card {background-color: white;align-items: center; box-shadow: 0px 0px 10px 1px rgba(140,140,140,.5); border: 1px solid #0c6980; border-radius: 15px;}
+.card.header {background-color: #0c6980; color: white; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-top-right-radius: 12px; border-top-left-radius: 12px;}
+.cards {max-width: 700px; margin: 0 auto; display: grid; grid-gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));}
+.LEDColor {color: #183153;}
+.switch {
+position: relative;
+display: inline-block;
+width: 50px;
+height: 24px;
+}
+
+.switch input {display:none;}
+.sliderTS {
+    position: absolute;
+    align-content: center;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #D3D3D3;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.sliderTS:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #f7f7f7;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .sliderTS {
+background-color: #00878F;
+}
+
+input:focus + .sliderTS {
+box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .sliderTS:before {
+-webkit-transform: translateX(26px);
+-ms-transform: translateX(26px);
+transform: translateX(26px);
+}
+
+.sliderTS:after {
+content:'OFF';
+color: white;
+display: block;
+position: absolute;
+transform: translate(-50%,-50%);
+top: 50%;
+left: 70%;
+font-size: 10px;
+font-family: Verdana, sans-serif;
+}
+
+input:checked + .sliderTS:after {  
+left: 25%;
+content:'ON';
+}
+
+input:disabled + .sliderTS {  
+opacity: 0.3;
+cursor: not-allowed;
+pointer-events: none;
+}
